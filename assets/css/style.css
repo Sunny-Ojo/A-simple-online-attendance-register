@@ -28,6 +28,7 @@ p {
   margin-top: 30px;
   padding: 10px;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 
 .newsletter {
@@ -74,17 +75,16 @@ p {
   margin-bottom: 20px;
 }
 
-.admin {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  background: rgb(136, 22, 130) !important;
-  padding-bottom: 8px;
-}
+
 
 i {
   margin-right: 4px !important;
 }
 
-.glyphicon {
-  color: white !important;
+.dashboard {
+  padding-top: 50px;
+}
+
+.welcome {
+  margin-left: 30px !important;
 }

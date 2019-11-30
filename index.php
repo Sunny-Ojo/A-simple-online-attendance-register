@@ -30,10 +30,10 @@ if (isset($_POST["submit"])) {
     }
     $fullname = filter_var($fullname, FILTER_SANITIZE_STRING);
     $factoryid = filter_var($factoryid, FILTER_SANITIZE_STRING);
-    if ($time > '7:00' || $time > '8:15') {
+    if ($time < '7:00' || $time > '8:15') {
         $errors['time'] = ucwords('sorry, you cannot clock in by this time ') . '<br>';
     }
-    if ($day == 'Saturda\y' || $day == 'Sund\ay') {
+    if ($day == 'Saturday' || $day == 'Sunday') {
         $errors['day'] = ucwords('sorry, you cannot clock in during weekends');
     }
     $checkuser = $conn->prepare('SELECT * FROM workers WHERE fullname=? AND factoryId=?');
@@ -144,11 +144,11 @@ foreach ($errors as $error) {
 echo "<div class='text-white bg-success'>" . $loggedOK . "</div>";
 ?>
                 <label for="fullName">Full Name:</label>
-                <input type="text" class="form-control" name="fullName" value="<?php echo $fullname; ?>" />
+                <input type="text" class="form-control" name="fullName" value="<?php echo $fullname; ?>" required />
             </div>
             <div class="form-group">
                 <label for="idNum">Factory ID Number:</label>
-                <input type="text" class="form-control" name="idNum" value="<?php echo $factoryid; ?>" />
+                <input type="text" class="form-control" name="idNum" value="<?php echo $factoryid; ?>" required />
 
             </div>
             <div class="form-group">
@@ -164,7 +164,7 @@ echo "<div class='text-white bg-success'>" . $loggedOK . "</div>";
 
                 <?php
 foreach ($emailerr as $emailerrors) {
-    echo "<li class='bg-danger text-white'> " . $emailerrors . "</li>";
+    echo "<div><li class='bg-danger text-white'> " . $emailerrors . "</li></div>";
 }
 echo "<div class='bg-success text-white'>" . $emailReg . "</div>";
 ?>
