@@ -1,0 +1,90 @@
+body {
+  font-family: Tahoma, Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.8rem;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: black;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 26px;
+
+}
+
+.carousel-caption h2,
+p {
+  position: relative;
+  top: 10% !important;
+}
+
+.main {
+  background: #f4f4f4;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.newsletter {
+  margin-top: 30px;
+  text-transform: capitalize;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.input-email {
+  width: 30%;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+.footer ul li a {
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: black;
+  background: white;
+}
+
+.footer {
+  background: lightgrey;
+  text-align: center;
+  color: black;
+  text-transform: capitalize;
+}
+
+.signup {
+  background: #f4f4f4;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.admin {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background: rgb(136, 22, 130) !important;
+  padding-bottom: 8px;
+}
+
+i {
+  margin-right: 4px !important;
+}
+
+.glyphicon {
+  color: white !important;
+}
