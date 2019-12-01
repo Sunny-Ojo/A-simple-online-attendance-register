@@ -73,7 +73,7 @@ if (isset($_POST["emaillist"])) {
     $checkEmail->execute([$email]);
     $check = $checkEmail->fetch();
     if ($check > 0) {
-        $emailerr['alreadysubscribe'] = ucwords('your email has been registered already ');
+        $emailerr['alreadysubscribed'] = ucwords('your email has been registered already ');
     }
     if (count($emailerr) === 0) {
         $stmt = $conn->prepare('INSERT INTO emaillist (email) VALUES(?)');
